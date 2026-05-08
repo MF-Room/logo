@@ -6,19 +6,29 @@ Official logo of MF Room, designed by Julien and refined by Rosalie.
 
 ### Horizontal lockup
 
-<img src="logo_1.svg" width="480">
+<img src="logo_horizontal.svg" width="480">
 
-### Square — full logo
+### Square - full logo
 
 | Light | Dark |
 |:-----:|:----:|
-| <img src="logo_0.svg" width="200"> | <img src="logo_0_neg.svg" width="200"> |
+| <img src="logo_square.svg" width="200"> | <img src="logo_square_dark.svg" width="200"> |
 
 ### Mark only
 
 | Light | Dark |
 |:-----:|:----:|
-| <img src="logo_2.svg" width="200"> | <img src="logo_2_neg.svg" width="200"> |
+| <img src="logo_mark.svg" width="200"> | <img src="logo_mark_dark.svg" width="200"> |
+
+## Exporting to PNG
+
+Run `export_png.sh` with the desired width in pixels:
+
+```bash
+./export_png.sh 512
+```
+
+This exports all SVG variants as PNG files named `<variant>_<size>.png` (e.g. `logo_mark_512.png`).
 
 ## Specifications
 

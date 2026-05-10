@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-svgs:
+    name: Validate SVG files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get install -y --no-install-recommends libxml2-utils
+
+      - name: Check SVGs are well-formed
+        run: |
+          failed=0
+          for svg in *.svg; do
+            echo -n "Checking $svg ... "
+            if xmllint --noout "$svg" 2>&1; then
+              echo "OK"
+            else
+              echo "FAILED"
+              failed=1
+            fi
+          done
+          exit $failed
+
+  test-export:
+    name: Test export_png.sh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Inkscape
+        run: sudo apt-get install -y --no-install-recommends inkscape
+
+      - name: Run export_png.sh
+        run: bash export_png.sh 128
+
+      - name: Verify PNG files were created and match SVG sources
+        run: |
+          failed=0
+          for svg in *.svg; do
+            base="${svg%.svg}"
+            png="${base}_128.png"
+            echo -n "Checking $png ... "
+            if [ ! -f "$png" ]; then
+              echo "MISSING"
+              failed=1
+              continue
+            fi
+            size=$(identify -format "%wx%h" "$png" 2>/dev/null || file "$png" | grep -oP '\d+ x \d+' | head -1)
+            echo "OK ($size)"
+          done
+          exit $failed

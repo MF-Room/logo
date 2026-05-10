@@ -1,5 +1,8 @@
 # MF Room Logo
 
+[![CI](https://github.com/MF-Room/logo/actions/workflows/ci.yml/badge.svg)](https://github.com/MF-Room/logo/actions/workflows/ci.yml)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](LICENSE)
+
 Official logo of MF Room, designed by Julien and refined by Rosalie.
 
 ## Variants
@@ -10,15 +13,11 @@ Official logo of MF Room, designed by Julien and refined by Rosalie.
 
 ### Square - full logo
 
-| Light | Dark |
-|:-----:|:----:|
-| <img src="logo_square.svg" width="200"> | <img src="logo_square_dark.svg" width="200"> |
+<img src="logo_square.svg" width="480">
 
 ### Mark only
 
-| Light | Dark |
-|:-----:|:----:|
-| <img src="logo_mark.svg" width="200"> | <img src="logo_mark_dark.svg" width="200"> |
+<img src="logo_mark.svg" width="480">
 
 ## Exporting to PNG
 
@@ -38,3 +37,8 @@ This exports all SVG variants as PNG files named `<variant>_<size>.png` (e.g. `l
 | Font | **Geist** |
 | Primary color | `#1a252f` |
 | Secondary color | `#f8f9fa` |
+
+## License
+
+This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE).
+You are free to share and adapt it, as long as you give appropriate credit and distribute any derivative works under the same license.

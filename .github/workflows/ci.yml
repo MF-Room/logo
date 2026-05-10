@@ -14,7 +14,7 @@ jobs:
       - name: Install xmllint
         run: sudo apt-get install -y --no-install-recommends libxml2-utils
 
-      - name: Check SVGs are well-formed
+      - name: Validate SVG XML syntax
         run: |
           failed=0
           for svg in *.svg; do
@@ -40,7 +40,7 @@ jobs:
       - name: Run export_png.sh
         run: bash export_png.sh 128
 
-      - name: Verify PNG files were created and match SVG sources
+      - name: Validate PNG exports
         run: |
           failed=0
           for svg in *.svg; do

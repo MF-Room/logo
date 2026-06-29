@@ -31,10 +31,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="Calque_1" />
   <defs
-     id="defs4">
-    <style
-       id="style2">.cls-1{fill:#fff;}</style>
-  </defs>
+     id="defs4" />
   <g
      id="g260"
      inkscape:label="logo_1"
@@ -47,7 +44,6 @@
        id="rect6"
        style="fill:#1a252f;fill-opacity:1;stroke-width:1.00003882;stroke-dasharray:none" />
     <path
-       class="cls-1"
        d="M 78.32,43.51 H 63.41 l -7.45,12.91 7.45,12.91 h 14.91 l 7.45,-12.91 z m -7.45,21.01 c -4.47,0 -8.09,-3.62 -8.09,-8.09 0,-4.47 3.62,-8.09 8.09,-8.09 4.47,0 8.09,3.62 8.09,8.09 0,4.47 -3.62,8.09 -8.09,8.09 z"
        id="path8"
        style="fill:#f8f9fa;fill-opacity:1" />
